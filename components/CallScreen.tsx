@@ -6,7 +6,6 @@ import { getPersona } from "@/lib/personas";
 import { TranscriptEntry, Scorecard } from "@/lib/types";
 import { saveScorecardToStorage } from "@/lib/storage";
 
-// Web Speech API type declarations
 declare global {
   interface Window {
     SpeechRecognition: new () => ISpeechRecognition;
@@ -67,6 +66,7 @@ export default function CallScreen() {
   const [elapsed, setElapsed] = useState(0);
   const [isScoring, setIsScoring] = useState(false);
   const [scoreError, setScoreError] = useState("");
+  const [isMicActive, setIsMicActive] = useState(false);
 
   const messagesRef = useRef<Array<{ role: "user" | "assistant"; content: string }>>([]);
   const transcriptRef = useRef<TranscriptEntry[]>([]);
@@ -74,6 +74,7 @@ export default function CallScreen() {
   const transcriptEndRef = useRef<HTMLDivElement>(null);
   const sessionId = useRef(`session_${Date.now()}_${Math.random().toString(36).slice(2)}`);
   const isEndingRef = useRef(false);
+  const listenTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (callState === "ended" || callState === "idle") return;
@@ -95,8 +96,13 @@ export default function CallScreen() {
     utt.rate = 0.92;
     utt.pitch = 1.05;
     utt.volume = 1;
-    utt.onend = () => onDone?.();
-    utt.onerror = () => onDone?.();
+    utt.onend = () => {
+      // 700ms delay after TTS so mic doesn't catch echo/reverb
+      setTimeout(() => onDone?.(), 700);
+    };
+    utt.onerror = () => {
+      setTimeout(() => onDone?.(), 700);
+    };
     synth.speak(utt);
   }, []);
 
@@ -108,6 +114,7 @@ export default function CallScreen() {
   const getHomeownerResponse = useCallback(async () => {
     if (isEndingRef.current) return;
     setCallState("homeowner-speaking");
+    setIsMicActive(false);
     let fullResponse = "";
     try {
       const res = await fetch("/api/chat", {
@@ -145,27 +152,47 @@ export default function CallScreen() {
     if (isEndingRef.current) return;
     const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRec) {
-      alert("Speech recognition not supported. Use Chrome or Safari.");
+      alert("Speech recognition not supported. Please use Chrome or Edge.");
       return;
     }
+
+    if (recognitionRef.current) {
+      try { recognitionRef.current.abort(); } catch { /* ignore */ }
+    }
+
     const rec = new SpeechRec();
     rec.lang = "en-US";
     rec.interimResults = true;
     rec.maxAlternatives = 1;
     rec.continuous = false;
     let finalText = "";
+    let hasSpoken = false;
 
-    rec.onstart = () => setCallState("listening");
+    rec.onstart = () => {
+      setCallState("listening");
+      setIsMicActive(true);
+    };
+
     rec.onresult = (e: ISpeechRecognitionEvent) => {
       let interim = "";
       for (let i = e.resultIndex; i < e.results.length; i++) {
         const t = e.results[i][0].transcript;
-        if (e.results[i].isFinal) { finalText += t + " "; } else { interim = t; }
+        if (e.results[i].isFinal) {
+          finalText += t + " ";
+          hasSpoken = true;
+        } else {
+          interim = t;
+        }
       }
       setCurrentSpeech(finalText + interim);
     };
-    rec.onspeechend = () => rec.stop();
+
+    rec.onspeechend = () => {
+      if (hasSpoken) rec.stop();
+    };
+
     rec.onend = () => {
+      setIsMicActive(false);
       if (isEndingRef.current) return;
       const text = finalText.trim();
       setCurrentSpeech("");
@@ -174,14 +201,25 @@ export default function CallScreen() {
         messagesRef.current = [...messagesRef.current, { role: "user", content: text }];
         getHomeownerResponse();
       } else {
-        setTimeout(() => startListening(), 300);
+        listenTimeoutRef.current = setTimeout(() => {
+          if (!isEndingRef.current) startListening();
+        }, 400);
       }
     };
+
     rec.onerror = (e: { error: string }) => {
-      if (e.error === "no-speech" || e.error === "aborted") {
-        if (!isEndingRef.current) setTimeout(() => startListening(), 300);
+      setIsMicActive(false);
+      if (e.error === "not-allowed" || e.error === "permission-denied") {
+        alert("Microphone access denied. Please allow mic access and reload the page.");
+        return;
+      }
+      if (!isEndingRef.current && (e.error === "no-speech" || e.error === "aborted" || e.error === "network")) {
+        listenTimeoutRef.current = setTimeout(() => {
+          if (!isEndingRef.current) startListening();
+        }, 400);
       }
     };
+
     recognitionRef.current = rec;
     try { rec.start(); } catch { /* already started */ }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -206,6 +244,8 @@ export default function CallScreen() {
     if (isEndingRef.current) return;
     isEndingRef.current = true;
     setCallState("ended");
+    setIsMicActive(false);
+    if (listenTimeoutRef.current) clearTimeout(listenTimeoutRef.current);
     recognitionRef.current?.abort();
     window.speechSynthesis.cancel();
     setCurrentSpeech("");
@@ -286,8 +326,8 @@ export default function CallScreen() {
         {transcript.length === 0 && callState === "idle" && (
           <div className="text-center mt-16 text-zinc-600 text-sm">
             <p className="text-4xl mb-4">🎙️</p>
-            <p>Press Start Call to begin</p>
-            <p className="text-xs mt-2 text-zinc-700">The homeowner will greet you. You respond naturally.</p>
+            <p>Press Start Call to begin your practice session</p>
+            <p className="text-xs mt-2 text-zinc-700">The homeowner will greet you — then respond naturally when you see the green mic.</p>
           </div>
         )}
 
@@ -308,7 +348,7 @@ export default function CallScreen() {
 
         {currentSpeech && (
           <div className={`flex ${callState === "listening" ? "justify-end" : "justify-start"}`}>
-            <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed opacity-70 italic ${
+            <div className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed opacity-75 italic ${
               callState === "listening"
                 ? "bg-blue-600/50 text-blue-200 rounded-br-sm"
                 : "bg-zinc-800 text-zinc-400 rounded-bl-sm"
@@ -356,23 +396,49 @@ export default function CallScreen() {
 
         {!isScoring && callState !== "idle" && callState !== "ended" && (
           <div className="space-y-3">
-            <div className="text-center">
-              {callState === "listening" && (
-                <p className="text-emerald-400 text-sm font-medium flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                  Listening...
+
+            {/* BIG listening indicator */}
+            {callState === "listening" && (
+              <div className="flex flex-col items-center gap-2 py-1">
+                <div
+                  className="w-16 h-16 rounded-full bg-emerald-500/20 border-2 border-emerald-400 flex items-center justify-center"
+                  style={{
+                    boxShadow: isMicActive
+                      ? "0 0 0 8px rgba(52,211,153,0.12), 0 0 0 18px rgba(52,211,153,0.06)"
+                      : "none",
+                    transition: "box-shadow 0.3s ease",
+                  }}
+                >
+                  <span className="text-2xl">🎙️</span>
+                </div>
+                <p className="text-emerald-400 text-sm font-bold tracking-wide uppercase">
+                  Your turn — speak now
                 </p>
-              )}
-              {callState === "homeowner-speaking" && (
-                <p className="text-amber-400 text-sm font-medium flex items-center justify-center gap-2">
-                  <span className="w-2 h-2 bg-amber-400 rounded-full animate-pulse" />
-                  Homeowner speaking...
+                <p className="text-zinc-600 text-xs">Mic is live. Talk naturally, pause when done.</p>
+              </div>
+            )}
+
+            {callState === "homeowner-speaking" && (
+              <div className="flex flex-col items-center gap-2 py-1">
+                <div className="w-16 h-16 rounded-full bg-amber-500/20 border-2 border-amber-400/50 flex items-center justify-center">
+                  <span className="text-2xl">{persona.emoji}</span>
+                </div>
+                <p className="text-amber-400 text-sm font-bold tracking-wide uppercase">
+                  Homeowner speaking
                 </p>
-              )}
-            </div>
+                <p className="text-zinc-600 text-xs">Listen carefully — respond when it&apos;s your turn.</p>
+              </div>
+            )}
+
+            {callState === "processing" && (
+              <div className="flex flex-col items-center gap-1 py-3">
+                <p className="text-zinc-500 text-sm animate-pulse">Processing...</p>
+              </div>
+            )}
+
             <button
               onClick={endCall}
-              className="w-full py-3.5 bg-red-600/20 hover:bg-red-600/30 text-red-400 rounded-xl font-semibold text-sm border border-red-600/30 hover:border-red-600/50 transition-colors"
+              className="w-full py-3 bg-red-600/20 hover:bg-red-600/30 text-red-400 rounded-xl font-semibold text-sm border border-red-600/30 hover:border-red-600/50 transition-colors"
             >
               End Call &amp; Get Score
             </button>
