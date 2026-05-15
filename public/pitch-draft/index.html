@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dave's Contracting — Home</title>
+  <meta name="description" content="Dave's Contracting — Premium tiling, bathroom renovations, basement renovations, and accent walls." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"></div>
+</div>
+
+<!-- Page Transition -->
+<div class="page-transition" id="pt" aria-hidden="true"></div>
+
+<!-- Navigation -->
+<header class="nav" id="nav">
+  <nav class="nav__inner container" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo" data-trans>Dave's Contracting</a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html" data-trans>Home</a></li>
+      <li><a href="services.html" data-trans>Services</a></li>
+      <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+      <li><a href="about.html" data-trans>About</a></li>
+      <li><a href="process.html" data-trans>Process</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--accent magnetic" data-trans>Get a Quote</a>
+    <button class="hamburger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Menu -->
+<div class="menu-overlay" id="mobMenu" role="dialog" aria-modal="true" aria-label="Navigation">
+  <nav class="menu-overlay__nav">
+    <ul class="mob-nav__links" role="list">
+      <li><a href="index.html" data-trans>Home</a></li>
+      <li><a href="services.html" data-trans>Services</a></li>
+      <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+      <li><a href="about.html" data-trans>About</a></li>
+      <li><a href="process.html" data-trans>Process</a></li>
+      <li><a href="contact.html" data-trans>Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero__inner container">
+
+      <div class="hero__content">
+        <p class="label hero__label">Est. 2010 &nbsp;&#8212;&nbsp; Solo Craftsman</p>
+        <h1 class="hero__hl display js-hero-hl" aria-label="Headline goes here">
+          Headline<br/><em>goes</em><br/>here.
+        </h1>
+        <p class="body-lg hero__sub">
+          Subheadline placeholder — one to two lines of supporting copy clarifying Dave's unique value proposition will appear here.
+        </p>
+        <div class="hero__ctas">
+          <a href="portfolio.html" class="btn btn--accent magnetic" data-trans>View Our Work</a>
+          <a href="services.html" class="btn btn--outline" data-trans>Our Services</a>
+        </div>
+      </div>
+
+      <div class="hero__visual" id="heroVis">
+        <div class="hero__img img-ph" role="img" aria-label="Hero image placeholder">
+          <span class="img-ph__lbl">Image 01</span>
+        </div>
+        <div class="hero__badge">
+          <span class="label">Precision Craftsmanship</span>
+        </div>
+        <div class="hero__badge-2">
+          <span class="heading-sm" style="font-size:2.2rem;line-height:1;">4.9</span>
+          <span class="label" style="margin-top:.2rem;">Rating</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-item">Tiling<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Bathroom Renovations<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Basement Renovations<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Accent Walls<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Tiling<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Bathroom Renovations<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Basement Renovations<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Accent Walls<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Tiling<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Bathroom Renovations<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Basement Renovations<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Accent Walls<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Tiling<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Bathroom Renovations<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Basement Renovations<span class="marquee-sep"></span></span>
+        <span class="marquee-item">Accent Walls<span class="marquee-sep"></span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="section--sm" aria-label="Statistics">
+    <div class="container">
+      <div class="stats-strip" data-stagger>
+        <div class="stats-item" data-stagger-item>
+          <span class="stats-num" data-count="14" data-suffix="+">0+</span>
+          <span class="stats-lbl">Years of Experience</span>
+        </div>
+        <div class="stats-item" data-stagger-item>
+          <span class="stats-num" data-count="320" data-suffix="+">0+</span>
+          <span class="stats-lbl">Projects Completed</span>
+        </div>
+        <div class="stats-item" data-stagger-item>
+          <span class="stats-num" data-count="98" data-suffix="%">0%</span>
+          <span class="stats-lbl">Client Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED WORK ============ -->
+  <section class="section" aria-labelledby="feat-h">
+    <div class="container">
+      <div class="feat__header">
+        <div>
+          <p class="label" data-reveal="up">Selected Work</p>
+          <h2 class="heading-xl feat__hl" id="feat-h" data-reveal="clip" style="margin-top:.75rem;">
+            Featured<br/><em>projects.</em>
+          </h2>
+        </div>
+        <a href="portfolio.html" class="btn btn--outline" data-trans data-reveal="up" data-delay="0.2">All Projects &rarr;</a>
+      </div>
+
+      <div class="feat__grid" data-stagger>
+        <article class="feat-card" data-stagger-item>
+          <a href="portfolio.html" class="feat-card__link" data-trans aria-label="Tiling project placeholder">
+            <div class="feat-card__img img-ph" role="img" aria-label="Project image placeholder">
+              <span class="img-ph__lbl">Image 02</span>
+              <div class="feat-card__overlay">
+                <p class="label">Tiling</p>
+                <h3 class="heading-sm" style="margin-top:.4rem;">Project title placeholder</h3>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="feat-card feat-card--tall" data-stagger-item>
+          <a href="portfolio.html" class="feat-card__link" data-trans aria-label="Bathroom project placeholder">
+            <div class="feat-card__img img-ph" role="img" aria-label="Project image placeholder">
+              <span class="img-ph__lbl">Image 03</span>
+              <div class="feat-card__overlay">
+                <p class="label">Bathroom Reno</p>
+                <h3 class="heading-sm" style="margin-top:.4rem;">Project title placeholder</h3>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="feat-card" data-stagger-item>
+          <a href="portfolio.html" class="feat-card__link" data-trans aria-label="Basement project placeholder">
+            <div class="feat-card__img img-ph" role="img" aria-label="Project image placeholder">
+              <span class="img-ph__lbl">Image 04</span>
+              <div class="feat-card__overlay">
+                <p class="label">Basement Reno</p>
+                <h3 class="heading-sm" style="margin-top:.4rem;">Project title placeholder</h3>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="feat-card" data-stagger-item>
+          <a href="portfolio.html" class="feat-card__link" data-trans aria-label="Accent wall project placeholder">
+            <div class="feat-card__img img-ph" role="img" aria-label="Project image placeholder">
+              <span class="img-ph__lbl">Image 05</span>
+              <div class="feat-card__overlay">
+                <p class="label">Accent Wall</p>
+                <h3 class="heading-sm" style="margin-top:.4rem;">Project title placeholder</h3>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BEFORE / AFTER ============ -->
+  <section class="section" aria-labelledby="ba-h">
+    <div class="container">
+      <div class="ba-hdr">
+        <div>
+          <p class="label" data-reveal="up">Transformations</p>
+          <h2 class="heading-xl" id="ba-h" data-reveal="clip" style="margin-top:.75rem;">
+            Before &amp;<br/><em>After.</em>
+          </h2>
+        </div>
+        <p class="body-lg ba-sub" data-reveal="up">
+          Two to three lines of copy describing the transformation process will appear here, setting expectations for the renovation experience.
+        </p>
+      </div>
+
+      <div class="ba" style="height:clamp(280px,44vw,560px);" aria-label="Before and after comparison. Drag the handle to compare.">
+        <div class="ba__layer ba__before img-ph" role="img" aria-label="Before image placeholder">
+          <span class="img-ph__lbl">Image 06 — Before</span>
+        </div>
+        <div class="ba__layer ba__after img-ph" role="img" aria-label="After image placeholder">
+          <span class="img-ph__lbl">Image 07 — After</span>
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,123,63,.1),rgba(242,237,228,.05));"></div>
+        </div>
+        <div class="ba__handle" aria-hidden="true">
+          <div class="ba__handle-knob">
+            <i data-lucide="chevrons-left-right" style="width:18px;height:18px;"></i>
+          </div>
+        </div>
+        <span class="ba__lbl ba__lbl--b">Before</span>
+        <span class="ba__lbl ba__lbl--a">After</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section" aria-labelledby="test-h">
+    <div class="container">
+      <div class="test-hdr">
+        <p class="label" data-reveal="up">Client Stories</p>
+        <h2 class="heading-xl" id="test-h" data-reveal="clip" style="margin-top:.75rem;">
+          What clients<br/><em>say.</em>
+        </h2>
+      </div>
+      <div class="t-slider" role="region" aria-label="Testimonials" tabindex="0">
+        <div class="t-track">
+          <article class="t-card">
+            <blockquote class="t-card__quote">"Testimonial placeholder — this is where a client quote will appear. Two to three sentences expressing satisfaction with the work and service quality provided by Dave."</blockquote>
+            <footer class="t-card__author">
+              <div class="t-card__avatar" aria-hidden="true"></div>
+              <div>
+                <p class="t-card__name">Client Name Placeholder</p>
+                <p class="t-card__meta">Bathroom Renovation — City Placeholder</p>
+              </div>
+            </footer>
+          </article>
+          <article class="t-card">
+            <blockquote class="t-card__quote">"Second testimonial placeholder — a compelling client quote will appear here. The text should feel genuine and speak to Dave's attention to detail and professionalism."</blockquote>
+            <footer class="t-card__author">
+              <div class="t-card__avatar" aria-hidden="true"></div>
+              <div>
+                <p class="t-card__name">Client Name Placeholder</p>
+                <p class="t-card__meta">Basement Renovation — City Placeholder</p>
+              </div>
+            </footer>
+          </article>
+          <article class="t-card">
+            <blockquote class="t-card__quote">"Third testimonial placeholder — a third client perspective will appear here. Focus on timeliness, quality, and the overall experience of working with Dave's Contracting."</blockquote>
+            <footer class="t-card__author">
+              <div class="t-card__avatar" aria-hidden="true"></div>
+              <div>
+                <p class="t-card__name">Client Name Placeholder</p>
+                <p class="t-card__meta">Tiling Project — City Placeholder</p>
+              </div>
+            </footer>
+          </article>
+          <article class="t-card">
+            <blockquote class="t-card__quote">"Fourth testimonial placeholder — the final card rounds out the social proof. Consider highlighting a high-profile or particularly memorable project transformation here."</blockquote>
+            <footer class="t-card__author">
+              <div class="t-card__avatar" aria-hidden="true"></div>
+              <div>
+                <p class="t-card__name">Client Name Placeholder</p>
+                <p class="t-card__meta">Accent Wall — City Placeholder</p>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="section cta-band" aria-labelledby="cta-h">
+    <div class="container">
+      <div class="cta-band__inner">
+        <div>
+          <p class="label" data-reveal="up">Start Your Project</p>
+          <h2 class="heading-xl" id="cta-h" data-reveal="clip" style="margin-top:.75rem;">
+            Ready to transform<br/>your <em>space?</em>
+          </h2>
+        </div>
+        <div class="cta-band__right" data-reveal="up" data-delay="0.15">
+          <p class="body-lg" style="max-width:38ch;margin-bottom:2rem;">Two to three lines of CTA copy encouraging visitors to reach out for a free, no-obligation quote will go here.</p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn--accent magnetic" data-trans>Get a Free Quote</a>
+            <a href="process.html" class="btn btn--outline" data-trans>See Our Process</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <p class="footer__wm" aria-label="Dave's Contracting wordmark">Dave's Contracting</p>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <p class="footer__col-title">About</p>
+        <p class="body-lg" style="font-size:.88rem;max-width:28ch;">Footer descriptor placeholder — two lines of copy about Dave's Contracting will appear here.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Navigation</p>
+        <ul class="footer__links" role="list">
+          <li><a href="index.html" data-trans>Home</a></li>
+          <li><a href="services.html" data-trans>Services</a></li>
+          <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+          <li><a href="about.html" data-trans>About</a></li>
+          <li><a href="process.html" data-trans>Process</a></li>
+          <li><a href="contact.html" data-trans>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <ul class="footer__links" role="list">
+          <li><a href="services.html" data-trans>Tiling</a></li>
+          <li><a href="services.html" data-trans>Bathroom Renovations</a></li>
+          <li><a href="services.html" data-trans>Basement Renovations</a></li>
+          <li><a href="services.html" data-trans>Accent Walls</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <ul class="footer__links" role="list">
+          <li><a href="mailto:hello@placeholder.com">hello@placeholder.com</a></li>
+          <li><a href="tel:+10000000000">(000) 000-0000</a></li>
+          <li><span class="text-muted">City, Province, Canada</span></li>
+        </ul>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Instagram"><i data-lucide="instagram" style="width:17px;height:17px;"></i></a>
+          <a href="#" class="footer__social" aria-label="Facebook"><i data-lucide="facebook" style="width:17px;height:17px;"></i></a>
+          <a href="#" class="footer__social" aria-label="Houzz"><i data-lucide="home" style="width:17px;height:17px;"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 Dave's Contracting. All rights reserved.</p>
+      <p>Crafted with precision.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="main.js"></script>
+<script>
+  /* ---- Hero Split-Text + Entrance ---- */
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Split headline into per-word spans
+    const hl = document.querySelector('.js-hero-hl');
+    if (hl) {
+      const raw = hl.innerHTML;
+      hl.innerHTML = raw.split(/<br\s*\/?>/i).map(line => {
+        const words = line.trim().split(/\s+/).filter(Boolean);
+        return words.map(w =>
+          `<span class="sw"><span class="sc">${w}</span></span>`
+        ).join(' ');
+      }).join('<br>');
+
+      gsap.fromTo(hl.querySelectorAll('.sc'),
+        { y: '115%' },
+        { y: '0%', stagger: 0.07, duration: 1.15, ease: 'expo.out', delay: 0.55 }
+      );
+    }
+
+    // Hero entrance
+    gsap.fromTo('.hero__label', { opacity:0, y:18 }, { opacity:1, y:0, duration:.8, ease:'expo.out', delay:.35 });
+    gsap.fromTo('.hero__sub',   { opacity:0, y:18 }, { opacity:1, y:0, duration:.8, ease:'expo.out', delay:.85 });
+    gsap.fromTo('.hero__ctas',  { opacity:0, y:18 }, { opacity:1, y:0, duration:.8, ease:'expo.out', delay:1.05 });
+    gsap.fromTo('#heroVis',     { opacity:0, x:50 }, { opacity:1, x:0, duration:1.3, ease:'expo.out', delay:.45 });
+
+    // Hero parallax
+    gsap.to('.hero__img', {
+      yPercent: -18, ease: 'none',
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1.5 }
+    });
+  });
+</script>
+
+<style>
+/* ---- Hero ---- */
+.hero { min-height: 100svh; display: flex; flex-direction: column; }
+
+.hero__inner {
+  flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+  align-items: center;
+  padding-top: calc(var(--nav-h) + 5rem); padding-bottom: 4rem;
+}
+
+.hero__content { display: flex; flex-direction: column; gap: 1.5rem; }
+.hero__hl { overflow: hidden; }
+.hero__sub { max-width: 42ch; }
+.hero__ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: .5rem; }
+
+.hero__visual { position: relative; opacity: 0; }
+.hero__img { width: 100%; aspect-ratio: 4/5; border-radius: 6px; }
+
+.hero__badge {
+  position: absolute; bottom: -1.2rem; left: -2.5rem;
+  background: var(--bg); border: 1px solid var(--border-mid);
+  padding: .8rem 1.3rem; border-radius: 4px;
+  display: flex; align-items: center;
+}
+
+.hero__badge-2 {
+  position: absolute; top: 2rem; right: -1.8rem;
+  background: var(--accent); color: var(--bg);
+  padding: 1rem 1.2rem; border-radius: 4px;
+  display: flex; flex-direction: column; align-items: center; gap: .1rem;
+  min-width: 80px; text-align: center;
+}
+.hero__badge-2 .label { color: var(--bg); }
+
+/* ---- Featured Work ---- */
+.feat__header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 3rem; gap: 2rem; flex-wrap: wrap;
+}
+.feat__hl { flex: 1; min-width: 200px; }
+
+.feat__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.25rem;
+}
+
+.feat-card { overflow: hidden; border-radius: 4px; }
+.feat-card--tall { grid-row: span 2; }
+
+.feat-card__link { display: block; position: relative; overflow: hidden; }
+
+.feat-card__img {
+  width: 100%; aspect-ratio: 4/3;
+  transition: transform .7s var(--ease-expo);
+}
+.feat-card--tall .feat-card__img {
+  aspect-ratio: unset; height: 100%; min-height: 480px;
+}
+
+.feat-card__link:hover .feat-card__img { transform: scale(1.04); }
+
+.feat-card__overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(15,14,12,.9) 0%, transparent 55%);
+  opacity: 0; transition: opacity .4s;
+}
+.feat-card__link:hover .feat-card__overlay { opacity: 1; }
+
+/* ---- Before/After header ---- */
+.ba-hdr {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+  align-items: center; margin-bottom: 2.5rem;
+}
+
+/* ---- Testimonials ---- */
+.test-hdr { margin-bottom: 2.5rem; }
+
+/* ---- CTA Band ---- */
+.cta-band { background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.cta-band__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; padding-top: calc(var(--nav-h) + 2.5rem); gap: 2.5rem; }
+  .hero__visual { order: -1; }
+  .hero__img { aspect-ratio: 16/9; max-height: 300px; }
+  .hero__badge { display: none; }
+  .hero__badge-2 { top: 1rem; right: 1rem; }
+  .feat__grid { grid-template-columns: 1fr; }
+  .feat-card--tall { grid-row: auto; }
+  .feat-card--tall .feat-card__img { min-height: auto; aspect-ratio: 4/3; }
+  .ba-hdr { grid-template-columns: 1fr; gap: 2rem; }
+  .cta-band__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Dave's Contracting</title>
+  <meta name="description" content="Expert tiling, bathroom renovations, basement renovations, and accent walls." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"></div>
+</div>
+<div class="page-transition" id="pt" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <nav class="nav__inner container" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo" data-trans>Dave's Contracting</a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html" data-trans>Home</a></li>
+      <li><a href="services.html" data-trans>Services</a></li>
+      <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+      <li><a href="about.html" data-trans>About</a></li>
+      <li><a href="process.html" data-trans>Process</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--accent magnetic" data-trans>Get a Quote</a>
+    <button class="hamburger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="menu-overlay" id="mobMenu" role="dialog" aria-modal="true">
+  <nav class="menu-overlay__nav">
+    <ul class="mob-nav__links" role="list">
+      <li><a href="index.html" data-trans>Home</a></li>
+      <li><a href="services.html" data-trans>Services</a></li>
+      <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+      <li><a href="about.html" data-trans>About</a></li>
+      <li><a href="process.html" data-trans>Process</a></li>
+      <li><a href="contact.html" data-trans>Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="pg-hero pt-nav section--sm">
+    <div class="container">
+      <div class="pg-hero__inner">
+        <p class="label" data-reveal="up">What We Do</p>
+        <h1 class="display pg-hero__hl" data-reveal="clip" style="margin-top:.75rem;">
+          Our<br/><em>Services.</em>
+        </h1>
+        <p class="body-lg pg-hero__sub" data-reveal="up" data-delay="0.1">
+          Page subheadline placeholder — one to two lines describing the breadth of Dave's services and commitment to quality will appear here.
+        </p>
+      </div>
+    </div>
+    <div class="hr" style="margin-top:clamp(3rem,6vw,6rem);"></div>
+  </section>
+
+  <!-- ============ SERVICE STICKY SCROLL ============ -->
+  <section class="svc-scroll" aria-label="Services detail">
+    <div class="container">
+      <div class="svc-layout">
+
+        <!-- Sticky Image Column -->
+        <div class="svc-sticky" aria-hidden="true">
+          <div class="svc-img-wrap">
+            <div class="svc-img-slot service-img-slot active" id="svc-img-tiling" role="img" aria-label="Tiling image placeholder">
+              <div class="img-ph" style="width:100%;height:100%;border-radius:6px;">
+                <span class="img-ph__lbl">Image 08 — Tiling</span>
+              </div>
+              <div class="svc-img-num">01</div>
+            </div>
+            <div class="svc-img-slot service-img-slot" id="svc-img-bathroom" role="img" aria-label="Bathroom image placeholder">
+              <div class="img-ph" style="width:100%;height:100%;border-radius:6px;background:linear-gradient(135deg,rgba(201,123,63,.09),rgba(242,237,228,.04));">
+                <span class="img-ph__lbl">Image 09 — Bathroom</span>
+              </div>
+              <div class="svc-img-num">02</div>
+            </div>
+            <div class="svc-img-slot service-img-slot" id="svc-img-basement" role="img" aria-label="Basement image placeholder">
+              <div class="img-ph" style="width:100%;height:100%;border-radius:6px;background:linear-gradient(135deg,rgba(242,237,228,.06),rgba(201,123,63,.07));">
+                <span class="img-ph__lbl">Image 10 — Basement</span>
+              </div>
+              <div class="svc-img-num">03</div>
+            </div>
+            <div class="svc-img-slot service-img-slot" id="svc-img-accent" role="img" aria-label="Accent wall image placeholder">
+              <div class="img-ph" style="width:100%;height:100%;border-radius:6px;background:linear-gradient(135deg,rgba(201,123,63,.07),rgba(242,237,228,.06));">
+                <span class="img-ph__lbl">Image 11 — Accent Wall</span>
+              </div>
+              <div class="svc-img-num">04</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scrollable Service Blocks -->
+        <div class="svc-blocks">
+
+          <!-- 01 Tiling -->
+          <div class="svc-block" id="sb-tiling" data-svc="tiling">
+            <div class="svc-block__num label">01</div>
+            <h2 class="heading-xl svc-block__hl">Tiling.</h2>
+            <p class="body-lg svc-block__body">
+              Service description placeholder — two to three lines of body copy describing Dave's tiling expertise will go here. Mention tile types, precision, and finish quality.
+            </p>
+            <p class="body-lg svc-block__body">
+              Second paragraph placeholder — additional detail about the tiling process, materials offered, or specialties (floor, wall, mosaic, large-format) will appear here.
+            </p>
+            <div class="svc-block__chips" data-stagger>
+              <span class="chip" data-stagger-item>Floor Tiling</span>
+              <span class="chip" data-stagger-item>Wall Tiling</span>
+              <span class="chip" data-stagger-item>Mosaic</span>
+              <span class="chip" data-stagger-item>Large Format</span>
+              <span class="chip" data-stagger-item>Custom Patterns</span>
+            </div>
+            <a href="contact.html" class="btn btn--accent magnetic" data-trans style="margin-top:2rem;">Quote This Service</a>
+          </div>
+
+          <!-- 02 Bathrooms -->
+          <div class="svc-block" id="sb-bathroom" data-svc="bathroom">
+            <div class="svc-block__num label">02</div>
+            <h2 class="heading-xl svc-block__hl">Bathroom<br/><em>Renovations.</em></h2>
+            <p class="body-lg svc-block__body">
+              Service description placeholder — two to three lines describing Dave's bathroom renovation expertise will appear here. Cover the full scope: demo, waterproofing, tile, fixtures.
+            </p>
+            <p class="body-lg svc-block__body">
+              Second paragraph placeholder — mention project timelines, material sourcing support, and what a client can expect throughout the renovation process.
+            </p>
+            <div class="svc-block__chips" data-stagger>
+              <span class="chip" data-stagger-item>Full Gut Renovation</span>
+              <span class="chip" data-stagger-item>Shower Build</span>
+              <span class="chip" data-stagger-item>Waterproofing</span>
+              <span class="chip" data-stagger-item>Fixture Install</span>
+              <span class="chip" data-stagger-item>Niche &amp; Built-Ins</span>
+            </div>
+            <a href="contact.html" class="btn btn--accent magnetic" data-trans style="margin-top:2rem;">Quote This Service</a>
+          </div>
+
+          <!-- 03 Basements -->
+          <div class="svc-block" id="sb-basement" data-svc="basement">
+            <div class="svc-block__num label">03</div>
+            <h2 class="heading-xl svc-block__hl">Basement<br/><em>Renovations.</em></h2>
+            <p class="body-lg svc-block__body">
+              Service description placeholder — two to three lines describing basement renovation capabilities will appear here. Cover flooring, feature walls, lighting rough-in, and layout planning.
+            </p>
+            <p class="body-lg svc-block__body">
+              Second paragraph placeholder — detail the consultation-to-completion process and how Dave approaches transforming raw basement space into livable, polished areas.
+            </p>
+            <div class="svc-block__chips" data-stagger>
+              <span class="chip" data-stagger-item>Flooring</span>
+              <span class="chip" data-stagger-item>Feature Walls</span>
+              <span class="chip" data-stagger-item>Wet Bar</span>
+              <span class="chip" data-stagger-item>Egress Windows</span>
+              <span class="chip" data-stagger-item>Finishing</span>
+            </div>
+            <a href="contact.html" class="btn btn--accent magnetic" data-trans style="margin-top:2rem;">Quote This Service</a>
+          </div>
+
+          <!-- 04 Accent Walls -->
+          <div class="svc-block" id="sb-accent" data-svc="accent">
+            <div class="svc-block__num label">04</div>
+            <h2 class="heading-xl svc-block__hl">Accent<br/><em>Walls.</em></h2>
+            <p class="body-lg svc-block__body">
+              Service description placeholder — two to three lines about accent wall specialties will appear here. Cover stone, tile, wood slat, plaster texture, and custom panel options.
+            </p>
+            <p class="body-lg svc-block__body">
+              Second paragraph placeholder — explain the design consultation process and how material, texture, and pattern selection works with Dave's guidance.
+            </p>
+            <div class="svc-block__chips" data-stagger>
+              <span class="chip" data-stagger-item>Stone Cladding</span>
+              <span class="chip" data-stagger-item>Tile Feature</span>
+              <span class="chip" data-stagger-item>Wood Slat</span>
+              <span class="chip" data-stagger-item>Plaster Texture</span>
+              <span class="chip" data-stagger-item>3D Panels</span>
+            </div>
+            <a href="contact.html" class="btn btn--accent magnetic" data-trans style="margin-top:2rem;">Quote This Service</a>
+          </div>
+
+        </div><!-- /svc-blocks -->
+      </div><!-- /svc-layout -->
+    </div>
+  </section>
+
+  <!-- ============ WHY DAVE ============ -->
+  <section class="section why" aria-labelledby="why-h">
+    <div class="container">
+      <div class="why__header">
+        <p class="label" data-reveal="up">Why Dave's Contracting</p>
+        <h2 class="heading-xl" id="why-h" data-reveal="clip" style="margin-top:.75rem;">
+          The difference is<br/><em>in the details.</em>
+        </h2>
+      </div>
+      <div class="why__grid" data-stagger>
+        <div class="why-card" data-stagger-item>
+          <div class="why-card__icon"><i data-lucide="shield-check" style="width:22px;height:22px;color:var(--accent);"></i></div>
+          <h3 class="heading-sm why-card__title">Quality Guarantee</h3>
+          <p class="body-lg why-card__body">Benefit placeholder — one to two lines describing this specific differentiator.</p>
+        </div>
+        <div class="why-card" data-stagger-item>
+          <div class="why-card__icon"><i data-lucide="clock" style="width:22px;height:22px;color:var(--accent);"></i></div>
+          <h3 class="heading-sm why-card__title">On-Time Delivery</h3>
+          <p class="body-lg why-card__body">Benefit placeholder — one to two lines describing this specific differentiator.</p>
+        </div>
+        <div class="why-card" data-stagger-item>
+          <div class="why-card__icon"><i data-lucide="message-square" style="width:22px;height:22px;color:var(--accent);"></i></div>
+          <h3 class="heading-sm why-card__title">Clear Communication</h3>
+          <p class="body-lg why-card__body">Benefit placeholder — one to two lines describing this specific differentiator.</p>
+        </div>
+        <div class="why-card" data-stagger-item>
+          <div class="why-card__icon"><i data-lucide="star" style="width:22px;height:22px;color:var(--accent);"></i></div>
+          <h3 class="heading-sm why-card__title">Trusted Since 2010</h3>
+          <p class="body-lg why-card__body">Benefit placeholder — one to two lines describing this specific differentiator.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section--sm" style="border-top:1px solid var(--border);">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <h2 class="heading-lg" data-reveal="clip" style="max-width:30ch;">Ready to discuss your project?</h2>
+      <div data-reveal="up" data-delay="0.15">
+        <a href="contact.html" class="btn btn--accent magnetic" data-trans>Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <p class="footer__wm">Dave's Contracting</p>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <p class="footer__col-title">About</p>
+        <p class="body-lg" style="font-size:.88rem;max-width:28ch;">Footer descriptor placeholder.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Navigation</p>
+        <ul class="footer__links">
+          <li><a href="index.html" data-trans>Home</a></li>
+          <li><a href="services.html" data-trans>Services</a></li>
+          <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+          <li><a href="about.html" data-trans>About</a></li>
+          <li><a href="process.html" data-trans>Process</a></li>
+          <li><a href="contact.html" data-trans>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <ul class="footer__links">
+          <li><a href="services.html" data-trans>Tiling</a></li>
+          <li><a href="services.html" data-trans>Bathroom Renovations</a></li>
+          <li><a href="services.html" data-trans>Basement Renovations</a></li>
+          <li><a href="services.html" data-trans>Accent Walls</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <ul class="footer__links">
+          <li><a href="mailto:hello@placeholder.com">hello@placeholder.com</a></li>
+          <li><a href="tel:+10000000000">(000) 000-0000</a></li>
+        </ul>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Instagram"><i data-lucide="instagram" style="width:17px;height:17px;"></i></a>
+          <a href="#" class="footer__social" aria-label="Facebook"><i data-lucide="facebook" style="width:17px;height:17px;"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 Dave's Contracting.</p>
+      <p>Crafted with precision.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Sticky image switcher via IntersectionObserver
+  const blocks   = document.querySelectorAll('.svc-block');
+  const imgSlots = document.querySelectorAll('.svc-img-slot');
+
+  function setActive(svc) {
+    imgSlots.forEach(s => {
+      const on = s.id === `svc-img-${svc}`;
+      s.classList.toggle('active', on);
+    });
+  }
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) setActive(e.target.dataset.svc);
+    });
+  }, { rootMargin: '-35% 0px -35% 0px', threshold: 0 });
+
+  blocks.forEach(b => obs.observe(b));
+
+  // Page headline entrance
+  gsap.fromTo('.pg-hero__hl .sc',
+    { y: '115%' },
+    { y: '0%', stagger: .06, duration: 1.1, ease: 'expo.out', delay: .6 }
+  );
+});
+</script>
+
+<style>
+/* ---- Page hero ---- */
+.pg-hero__inner { max-width: 800px; }
+.pg-hero__sub   { max-width: 52ch; margin-top: .75rem; }
+
+/* ---- Service Scroll Layout ---- */
+.svc-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: start;
+}
+
+.svc-sticky {
+  position: sticky;
+  top: calc(var(--nav-h) + 3rem);
+  height: calc(100vh - var(--nav-h) - 6rem);
+  display: flex; align-items: center;
+}
+
+.svc-img-wrap { position: relative; width: 100%; aspect-ratio: 4/5; }
+
+.svc-img-slot {
+  position: absolute; inset: 0;
+  opacity: 0; transition: opacity .6s var(--ease-expo);
+  pointer-events: none;
+}
+.svc-img-slot.active { opacity: 1; pointer-events: auto; }
+
+.svc-img-num {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  font-family: var(--font-serif); font-size: 4rem; font-weight: 700;
+  line-height: 1; color: rgba(242,237,228,.12);
+  pointer-events: none;
+}
+
+/* ---- Service Blocks ---- */
+.svc-blocks { padding: clamp(4rem,8vw,8rem) 0; }
+
+.svc-block {
+  padding: clamp(4rem,7vw,7rem) 0;
+  border-bottom: 1px solid var(--border);
+}
+.svc-block:last-child { border-bottom: none; }
+
+.svc-block__num { margin-bottom: .75rem; }
+.svc-block__hl  { margin-bottom: 1.5rem; }
+.svc-block__body { margin-bottom: 1rem; max-width: 48ch; }
+
+.svc-block__chips {
+  display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem;
+}
+
+.chip {
+  display: inline-flex; align-items: center;
+  padding: .4rem 1rem; border-radius: 999px;
+  border: 1px solid var(--border-mid);
+  font-size: .75rem; font-weight: 500;
+  letter-spacing: .05em;
+  color: var(--fg-muted);
+  transition: border-color .3s, color .3s, background .3s;
+}
+.chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+/* ---- Why Cards ---- */
+.why__header { margin-bottom: 3.5rem; }
+
+.why__grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem;
+}
+
+.why-card {
+  background: rgba(242,237,228,.03);
+  border: 1px solid var(--border);
+  border-radius: 4px; padding: 2rem 1.75rem;
+  transition: border-color .3s, background .3s;
+}
+.why-card:hover { border-color: var(--border-mid); background: rgba(242,237,228,.05); }
+
+.why-card__icon { margin-bottom: 1.25rem; }
+.why-card__title { margin-bottom: .75rem; }
+.why-card__body { font-size: .9rem; }
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .why__grid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media (max-width: 768px) {
+  .svc-layout { grid-template-columns: 1fr; }
+  .svc-sticky { display: none; }
+  .svc-blocks { padding: 2rem 0; }
+  .why__grid { grid-template-columns: 1fr; }
+}
+</style>
+</body>
+</html>

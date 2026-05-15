@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Dave's Contracting</title>
+  <meta name="description" content="About Dave — the story behind the craftsmanship." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"></div>
+</div>
+<div class="page-transition" id="pt" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <nav class="nav__inner container" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo" data-trans>Dave's Contracting</a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html" data-trans>Home</a></li>
+      <li><a href="services.html" data-trans>Services</a></li>
+      <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+      <li><a href="about.html" data-trans>About</a></li>
+      <li><a href="process.html" data-trans>Process</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--accent magnetic" data-trans>Get a Quote</a>
+    <button class="hamburger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="menu-overlay" id="mobMenu" role="dialog" aria-modal="true">
+  <nav class="menu-overlay__nav">
+    <ul class="mob-nav__links" role="list">
+      <li><a href="index.html" data-trans>Home</a></li>
+      <li><a href="services.html" data-trans>Services</a></li>
+      <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+      <li><a href="about.html" data-trans>About</a></li>
+      <li><a href="process.html" data-trans>Process</a></li>
+      <li><a href="contact.html" data-trans>Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="abt-hero pt-nav" aria-label="About hero">
+    <div class="container">
+      <div class="abt-hero__inner">
+        <div class="abt-hero__text">
+          <p class="label" data-reveal="up">The Person Behind the Work</p>
+          <h1 class="display abt-hero__hl" data-reveal="clip" style="margin-top:.75rem;">
+            About<br/><em>Dave.</em>
+          </h1>
+        </div>
+        <div class="abt-hero__portrait" data-reveal="up" data-delay="0.2">
+          <div class="abt-portrait-img img-ph" role="img" aria-label="Portrait image placeholder">
+            <span class="img-ph__lbl">Image 24 — Dave Portrait</span>
+          </div>
+          <div class="abt-portrait-tag">
+            <span class="label">Solo Craftsman</span>
+            <span class="heading-sm" style="font-size:1rem;margin-top:.2rem;">Since 2010</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hr" style="margin-top:0;"></div>
+  </section>
+
+  <!-- ============ INTRO ============ -->
+  <section class="section" aria-labelledby="intro-h">
+    <div class="container">
+      <div class="abt-intro">
+        <div class="abt-intro__left">
+          <p class="label" data-reveal="up">The Story</p>
+          <h2 class="heading-xl" id="intro-h" data-reveal="clip" style="margin-top:.75rem;">
+            Craftsmanship<br/>isn't a job —<br/><em>it's a standard.</em>
+          </h2>
+        </div>
+        <div class="abt-intro__right">
+          <p class="body-lg" data-reveal="up">
+            About Dave placeholder paragraph — this opening paragraph will introduce Dave personally: his background, how long he has been in the trade, and what drives his commitment to quality work. Two to three sentences, warm and direct.
+          </p>
+          <p class="body-lg" data-reveal="up" data-delay="0.08" style="margin-top:1.25rem;">
+            Second paragraph placeholder — this paragraph will describe Dave's philosophy: why he operates as a solo contractor, the advantage this brings to clients (direct communication, consistent workmanship, accountability), and what sets his approach apart from larger crews.
+          </p>
+          <p class="body-lg" data-reveal="up" data-delay="0.16" style="margin-top:1.25rem;">
+            Third paragraph placeholder — this closing paragraph will speak to Dave's passion for the craft: an anecdote or specific detail that humanises the business and makes it memorable. One to two sentences that leave a strong impression.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LARGE IMAGE ============ -->
+  <section class="abt-full-img" aria-label="Workshop or project image">
+    <div class="container">
+      <div class="abt-full-img__wrap img-ph" role="img" aria-label="Full-width image placeholder — workshop or on-site">
+        <span class="img-ph__lbl">Image 25 — Workshop / On-Site</span>
+        <div class="abt-full-img__caption" data-reveal="up">
+          <p class="label">Caption placeholder</p>
+          <p class="body-lg" style="margin-top:.4rem;max-width:40ch;">Short caption or pull-quote placeholder will appear here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VALUES ============ -->
+  <section class="section" aria-labelledby="val-h">
+    <div class="container">
+      <div class="val-header">
+        <p class="label" data-reveal="up">What Drives the Work</p>
+        <h2 class="heading-xl" id="val-h" data-reveal="clip" style="margin-top:.75rem;">Core<br/><em>values.</em></h2>
+      </div>
+
+      <div class="val-list">
+        <div class="val-item" data-reveal="up">
+          <span class="val-num label">01</span>
+          <div class="val-body">
+            <h3 class="heading-md val-title">Value title placeholder</h3>
+            <p class="body-lg val-desc">Value description placeholder — one to two sentences describing this core value and how it shows up in Dave's work every day.</p>
+          </div>
+        </div>
+        <div class="hr" data-reveal="line"></div>
+        <div class="val-item" data-reveal="up">
+          <span class="val-num label">02</span>
+          <div class="val-body">
+            <h3 class="heading-md val-title">Value title placeholder</h3>
+            <p class="body-lg val-desc">Value description placeholder — one to two sentences describing this core value and how it is reflected in project outcomes and client relationships.</p>
+          </div>
+        </div>
+        <div class="hr" data-reveal="line"></div>
+        <div class="val-item" data-reveal="up">
+          <span class="val-num label">03</span>
+          <div class="val-body">
+            <h3 class="heading-md val-title">Value title placeholder</h3>
+            <p class="body-lg val-desc">Value description placeholder — one to two sentences on this third value, connecting it to a specific aspect of the client experience Dave prioritises.</p>
+          </div>
+        </div>
+        <div class="hr" data-reveal="line"></div>
+        <div class="val-item" data-reveal="up">
+          <span class="val-num label">04</span>
+          <div class="val-body">
+            <h3 class="heading-md val-title">Value title placeholder</h3>
+            <p class="body-lg val-desc">Value description placeholder — final value, one to two sentences capturing the commitment that ties all other values together.</p>
+          </div>
+        </div>
+        <div class="hr" data-reveal="line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CREDENTIALS ============ -->
+  <section class="section" style="background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);" aria-labelledby="cred-h">
+    <div class="container">
+      <div class="cred-header">
+        <p class="label" data-reveal="up">Credentials &amp; Associations</p>
+        <h2 class="heading-xl" id="cred-h" data-reveal="clip" style="margin-top:.75rem;">Trusted,<br/><em>licensed,<br/>insured.</em></h2>
+      </div>
+      <div class="cred-grid" data-stagger>
+        <div class="cred-card" data-stagger-item>
+          <div class="cred-card__icon"><i data-lucide="badge-check" style="width:26px;height:26px;color:var(--accent);"></i></div>
+          <h3 class="heading-sm cred-card__title">License Placeholder</h3>
+          <p class="body-lg cred-card__body">Credential description placeholder — licence type and issuing body will appear here.</p>
+        </div>
+        <div class="cred-card" data-stagger-item>
+          <div class="cred-card__icon"><i data-lucide="shield" style="width:26px;height:26px;color:var(--accent);"></i></div>
+          <h3 class="heading-sm cred-card__title">Insurance Placeholder</h3>
+          <p class="body-lg cred-card__body">Insurance type and coverage details placeholder will appear here.</p>
+        </div>
+        <div class="cred-card" data-stagger-item>
+          <div class="cred-card__icon"><i data-lucide="award" style="width:26px;height:26px;color:var(--accent);"></i></div>
+          <h3 class="heading-sm cred-card__title">Certification Placeholder</h3>
+          <p class="body-lg cred-card__body">Trade certification or association membership placeholder will appear here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section" aria-labelledby="abt-cta-h">
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap;">
+        <h2 class="heading-xl" id="abt-cta-h" data-reveal="clip" style="max-width:18ch;">
+          Work with Dave<br/>on your <em>next project.</em>
+        </h2>
+        <div data-reveal="up" data-delay="0.15" style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn--accent magnetic" data-trans>Get a Quote</a>
+          <a href="process.html" class="btn btn--outline" data-trans>See the Process</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <p class="footer__wm">Dave's Contracting</p>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <p class="footer__col-title">About</p>
+        <p class="body-lg" style="font-size:.88rem;max-width:28ch;">Footer descriptor placeholder.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Navigation</p>
+        <ul class="footer__links">
+          <li><a href="index.html" data-trans>Home</a></li>
+          <li><a href="services.html" data-trans>Services</a></li>
+          <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+          <li><a href="about.html" data-trans>About</a></li>
+          <li><a href="process.html" data-trans>Process</a></li>
+          <li><a href="contact.html" data-trans>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <ul class="footer__links">
+          <li><a href="services.html" data-trans>Tiling</a></li>
+          <li><a href="services.html" data-trans>Bathroom Renovations</a></li>
+          <li><a href="services.html" data-trans>Basement Renovations</a></li>
+          <li><a href="services.html" data-trans>Accent Walls</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <ul class="footer__links">
+          <li><a href="mailto:hello@placeholder.com">hello@placeholder.com</a></li>
+          <li><a href="tel:+10000000000">(000) 000-0000</a></li>
+        </ul>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Instagram"><i data-lucide="instagram" style="width:17px;height:17px;"></i></a>
+          <a href="#" class="footer__social" aria-label="Facebook"><i data-lucide="facebook" style="width:17px;height:17px;"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 Dave's Contracting.</p>
+      <p>Crafted with precision.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Portrait parallax
+  gsap.to('.abt-portrait-img', {
+    yPercent: -12, ease: 'none',
+    scrollTrigger: {
+      trigger: '.abt-hero', start: 'top top', end: 'bottom top', scrub: 1.5
+    }
+  });
+
+  // Full image parallax
+  gsap.to('.abt-full-img__wrap', {
+    yPercent: -10, ease: 'none',
+    scrollTrigger: {
+      trigger: '.abt-full-img', start: 'top bottom', end: 'bottom top', scrub: 1.5
+    }
+  });
+});
+</script>
+
+<style>
+/* ---- About Hero ---- */
+.abt-hero { padding-top: 0; padding-bottom: 0; }
+.abt-hero__inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: end;
+  padding: calc(var(--nav-h) + 5rem) 0 4rem;
+}
+.abt-hero__text { align-self: center; }
+
+.abt-portrait-img {
+  width: 100%; aspect-ratio: 3/4;
+  border-radius: 6px;
+}
+
+.abt-portrait-tag {
+  position: absolute; /* needs relative parent set below */
+  margin-top: 1.5rem;
+  display: flex; flex-direction: column;
+}
+
+.abt-hero__portrait { position: relative; }
+
+/* ---- Intro ---- */
+.abt-intro {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: start;
+}
+
+/* ---- Full image ---- */
+.abt-full-img { overflow: hidden; }
+.abt-full-img__wrap {
+  width: 100%; aspect-ratio: 21/9;
+  border-radius: 6px; position: relative;
+  display: flex; align-items: flex-end; padding: 2.5rem;
+}
+.abt-full-img__caption {
+  background: rgba(15,14,12,.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1.5rem 1.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+/* ---- Values ---- */
+.val-header { margin-bottom: 3rem; }
+.val-list { display: flex; flex-direction: column; }
+
+.val-item {
+  display: grid; grid-template-columns: 80px 1fr;
+  gap: 2rem; align-items: start;
+  padding: clamp(2rem,4vw,3.5rem) 0;
+}
+
+.val-num { padding-top: .3rem; }
+.val-title { margin-bottom: .8rem; }
+.val-desc { max-width: 56ch; }
+
+/* ---- Credentials ---- */
+.cred-header { margin-bottom: 3rem; }
+.cred-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem;
+}
+.cred-card {
+  background: rgba(242,237,228,.03);
+  border: 1px solid var(--border);
+  border-radius: 5px; padding: 2rem;
+  transition: border-color .3s, background .3s;
+}
+.cred-card:hover { border-color: var(--border-mid); background: rgba(242,237,228,.055); }
+.cred-card__icon { margin-bottom: 1.25rem; }
+.cred-card__title { margin-bottom: .6rem; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .abt-hero__inner { grid-template-columns: 1fr; gap: 2.5rem; padding-top: calc(var(--nav-h) + 2.5rem); }
+  .abt-intro      { grid-template-columns: 1fr; gap: 2.5rem; }
+  .abt-full-img__wrap { aspect-ratio: 16/9; }
+  .cred-grid { grid-template-columns: 1fr; }
+  .val-item { grid-template-columns: 50px 1fr; gap: 1.25rem; }
+}
+</style>
+</body>
+</html>

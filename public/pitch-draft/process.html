@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Process — Dave's Contracting</title>
+  <meta name="description" content="How Dave's Contracting works — a five-step process built around clarity, craft, and care." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"></div>
+</div>
+<div class="page-transition" id="pt" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <nav class="nav__inner container" aria-label="Main navigation">
+    <a href="index.html" class="nav__logo" data-trans>Dave's Contracting</a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html" data-trans>Home</a></li>
+      <li><a href="services.html" data-trans>Services</a></li>
+      <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+      <li><a href="about.html" data-trans>About</a></li>
+      <li><a href="process.html" data-trans>Process</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--accent magnetic" data-trans>Get a Quote</a>
+    <button class="hamburger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="menu-overlay" id="mobMenu" role="dialog" aria-modal="true">
+  <nav class="menu-overlay__nav">
+    <ul class="mob-nav__links" role="list">
+      <li><a href="index.html" data-trans>Home</a></li>
+      <li><a href="services.html" data-trans>Services</a></li>
+      <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+      <li><a href="about.html" data-trans>About</a></li>
+      <li><a href="process.html" data-trans>Process</a></li>
+      <li><a href="contact.html" data-trans>Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="pg-hero pt-nav section--sm" aria-label="Process hero">
+    <div class="container">
+      <div class="pg-hero__inner">
+        <p class="label" data-reveal="up">How We Work</p>
+        <h1 class="display" data-reveal="clip" style="margin-top:.75rem;">
+          The<br/><em>Process.</em>
+        </h1>
+        <p class="body-lg" data-reveal="up" data-delay="0.1" style="margin-top:.75rem;max-width:52ch;">
+          Process intro placeholder — one to two lines describing how a clear, collaborative process leads to better outcomes and a stress-free renovation experience.
+        </p>
+      </div>
+    </div>
+    <div class="hr" style="margin-top:clamp(3rem,5vw,5rem);"></div>
+  </section>
+
+  <!-- ============ HORIZONTAL SCROLL JOURNEY ============ -->
+  <section class="proc-pin-wrap" id="procPin" aria-label="Five-step process">
+    <div class="proc-track" id="procTrack">
+
+      <!-- Progress bar -->
+      <div class="proc-progress" id="procProgress" aria-hidden="true"></div>
+
+      <!-- Step 01 -->
+      <div class="proc-step" aria-label="Step 1">
+        <div class="proc-step__inner">
+          <div class="proc-step__img img-ph" role="img" aria-label="Step 1 image placeholder">
+            <span class="img-ph__lbl">Image 26 — Step 01</span>
+          </div>
+          <div class="proc-step__content">
+            <span class="proc-step__num label">01 / 05</span>
+            <h2 class="heading-xl proc-step__hl">Initial<br/><em>Consultation.</em></h2>
+            <p class="body-lg proc-step__body">Step description placeholder — two to three sentences describing what happens at the initial consultation: site visit, scope discussion, timeline expectations, and no-obligation quote.</p>
+            <div class="proc-step__tags">
+              <span class="chip">Free Site Visit</span>
+              <span class="chip">Scope Review</span>
+              <span class="chip">No Obligation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 02 -->
+      <div class="proc-step" aria-label="Step 2">
+        <div class="proc-step__inner proc-step__inner--flip">
+          <div class="proc-step__content">
+            <span class="proc-step__num label">02 / 05</span>
+            <h2 class="heading-xl proc-step__hl">Detailed<br/><em>Proposal.</em></h2>
+            <p class="body-lg proc-step__body">Step description placeholder — two to three sentences on how the quote is structured, what is included, and how Dave walks the client through every line item before anything is agreed.</p>
+            <div class="proc-step__tags">
+              <span class="chip">Itemised Quote</span>
+              <span class="chip">Material Options</span>
+              <span class="chip">Timeline</span>
+            </div>
+          </div>
+          <div class="proc-step__img img-ph" role="img" aria-label="Step 2 image placeholder" style="background:linear-gradient(135deg,rgba(201,123,63,.09),rgba(242,237,228,.04));">
+            <span class="img-ph__lbl">Image 27 — Step 02</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 03 -->
+      <div class="proc-step" aria-label="Step 3">
+        <div class="proc-step__inner">
+          <div class="proc-step__img img-ph" role="img" aria-label="Step 3 image placeholder" style="background:linear-gradient(135deg,rgba(242,237,228,.06),rgba(201,123,63,.07));">
+            <span class="img-ph__lbl">Image 28 — Step 03</span>
+          </div>
+          <div class="proc-step__content">
+            <span class="proc-step__num label">03 / 05</span>
+            <h2 class="heading-xl proc-step__hl">Material<br/><em>Selection.</em></h2>
+            <p class="body-lg proc-step__body">Step description placeholder — two to three sentences explaining how Dave helps clients choose materials, navigate supplier options, and finalise selections before work begins — avoiding surprises mid-project.</p>
+            <div class="proc-step__tags">
+              <span class="chip">Supplier Access</span>
+              <span class="chip">Design Guidance</span>
+              <span class="chip">Samples</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 04 -->
+      <div class="proc-step" aria-label="Step 4">
+        <div class="proc-step__inner proc-step__inner--flip">
+          <div class="proc-step__content">
+            <span class="proc-step__num label">04 / 05</span>
+            <h2 class="heading-xl proc-step__hl">Expert<br/><em>Execution.</em></h2>
+            <p class="body-lg proc-step__body">Step description placeholder — two to three sentences on the build phase: daily communication, site cleanliness standards, milestone check-ins, and how Dave handles any unexpected conditions discovered during the work.</p>
+            <div class="proc-step__tags">
+              <span class="chip">Daily Updates</span>
+              <span class="chip">Site Protection</span>
+              <span class="chip">Quality Checks</span>
+            </div>
+          </div>
+          <div class="proc-step__img img-ph" role="img" aria-label="Step 4 image placeholder" style="background:linear-gradient(135deg,rgba(201,123,63,.07),rgba(242,237,228,.06));">
+            <span class="img-ph__lbl">Image 29 — Step 04</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 05 -->
+      <div class="proc-step proc-step--last" aria-label="Step 5">
+        <div class="proc-step__inner">
+          <div class="proc-step__img img-ph" role="img" aria-label="Step 5 image placeholder" style="background:linear-gradient(135deg,rgba(242,237,228,.05),rgba(201,123,63,.09));">
+            <span class="img-ph__lbl">Image 30 — Step 05</span>
+          </div>
+          <div class="proc-step__content">
+            <span class="proc-step__num label">05 / 05</span>
+            <h2 class="heading-xl proc-step__hl">Final<br/><em>Walkthrough.</em></h2>
+            <p class="body-lg proc-step__body">Step description placeholder — two to three sentences on the completion stage: the walk-through inspection, punch-list resolution, final clean, and what the warranty or follow-up support looks like after the project closes.</p>
+            <div class="proc-step__tags">
+              <span class="chip">Punch-List</span>
+              <span class="chip">Final Clean</span>
+              <span class="chip">Warranty</span>
+            </div>
+            <a href="contact.html" class="btn btn--accent magnetic" data-trans style="margin-top:2rem;">Start Your Project</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /proc-track -->
+
+    <!-- Scroll hint -->
+    <div class="proc-hint" id="procHint" aria-hidden="true">
+      <span class="label" style="font-size:.65rem;">Scroll to explore</span>
+      <i data-lucide="arrow-right" style="width:14px;height:14px;color:var(--accent);"></i>
+    </div>
+  </section>
+
+  <!-- ============ MOBILE PROCESS (visible on mobile only) ============ -->
+  <section class="proc-mobile section" aria-label="Process steps">
+    <div class="container">
+      <div class="proc-mobile__list">
+        <div class="proc-mobile__item" data-reveal="up">
+          <span class="label">01 / 05</span>
+          <h3 class="heading-md" style="margin:.5rem 0;">Initial Consultation</h3>
+          <p class="body-lg">Step description placeholder — free site visit, scope discussion, and no-obligation quote.</p>
+        </div>
+        <div class="hr" data-reveal="line"></div>
+        <div class="proc-mobile__item" data-reveal="up">
+          <span class="label">02 / 05</span>
+          <h3 class="heading-md" style="margin:.5rem 0;">Detailed Proposal</h3>
+          <p class="body-lg">Step description placeholder — itemised quote walkthrough and material options review.</p>
+        </div>
+        <div class="hr" data-reveal="line"></div>
+        <div class="proc-mobile__item" data-reveal="up">
+          <span class="label">03 / 05</span>
+          <h3 class="heading-md" style="margin:.5rem 0;">Material Selection</h3>
+          <p class="body-lg">Step description placeholder — supplier access, design guidance, and sample review.</p>
+        </div>
+        <div class="hr" data-reveal="line"></div>
+        <div class="proc-mobile__item" data-reveal="up">
+          <span class="label">04 / 05</span>
+          <h3 class="heading-md" style="margin:.5rem 0;">Expert Execution</h3>
+          <p class="body-lg">Step description placeholder — daily updates, site protection, and quality milestone checks.</p>
+        </div>
+        <div class="hr" data-reveal="line"></div>
+        <div class="proc-mobile__item" data-reveal="up">
+          <span class="label">05 / 05</span>
+          <h3 class="heading-md" style="margin:.5rem 0;">Final Walkthrough</h3>
+          <p class="body-lg">Step description placeholder — punch-list, final clean, and warranty support.</p>
+        </div>
+        <div class="hr" data-reveal="line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="section--sm" style="border-top:1px solid var(--border);" aria-label="Statistics">
+    <div class="container">
+      <div class="stats-strip" data-stagger>
+        <div class="stats-item" data-stagger-item>
+          <span class="stats-num" data-count="14" data-suffix="+">0+</span>
+          <span class="stats-lbl">Years Experience</span>
+        </div>
+        <div class="stats-item" data-stagger-item>
+          <span class="stats-num" data-count="320" data-suffix="+">0+</span>
+          <span class="stats-lbl">Projects Completed</span>
+        </div>
+        <div class="stats-item" data-stagger-item>
+          <span class="stats-num" data-count="98" data-suffix="%">0%</span>
+          <span class="stats-lbl">Client Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section" aria-labelledby="proc-cta-h">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap;">
+      <h2 class="heading-xl" id="proc-cta-h" data-reveal="clip" style="max-width:20ch;">
+        Ready to start<br/><em>step one?</em>
+      </h2>
+      <div data-reveal="up" data-delay="0.15" style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn--accent magnetic" data-trans>Book a Consultation</a>
+        <a href="portfolio.html" class="btn btn--outline" data-trans>View Our Work</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <p class="footer__wm">Dave's Contracting</p>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <p class="footer__col-title">About</p>
+        <p class="body-lg" style="font-size:.88rem;max-width:28ch;">Footer descriptor placeholder.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Navigation</p>
+        <ul class="footer__links">
+          <li><a href="index.html" data-trans>Home</a></li>
+          <li><a href="services.html" data-trans>Services</a></li>
+          <li><a href="portfolio.html" data-trans>Portfolio</a></li>
+          <li><a href="about.html" data-trans>About</a></li>
+          <li><a href="process.html" data-trans>Process</a></li>
+          <li><a href="contact.html" data-trans>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <ul class="footer__links">
+          <li><a href="services.html" data-trans>Tiling</a></li>
+          <li><a href="services.html" data-trans>Bathroom Renovations</a></li>
+          <li><a href="services.html" data-trans>Basement Renovations</a></li>
+          <li><a href="services.html" data-trans>Accent Walls</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Contact</p>
+        <ul class="footer__links">
+          <li><a href="mailto:hello@placeholder.com">hello@placeholder.com</a></li>
+          <li><a href="tel:+10000000000">(000) 000-0000</a></li>
+        </ul>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Instagram"><i data-lucide="instagram" style="width:17px;height:17px;"></i></a>
+          <a href="#" class="footer__social" aria-label="Facebook"><i data-lucide="facebook" style="width:17px;height:17px;"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2024 Dave's Contracting.</p>
+      <p>Crafted with precision.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const pin   = document.getElementById('procPin');
+  const track = document.getElementById('procTrack');
+  const hint  = document.getElementById('procHint');
+  const bar   = document.getElementById('procProgress');
+
+  // Only run horizontal scroll on wide screens
+  const mq = window.matchMedia('(min-width: 901px)');
+
+  function initHScroll() {
+    if (!mq.matches) return;
+
+    const steps      = track.querySelectorAll('.proc-step');
+    const trackWidth = track.scrollWidth;
+    const travelDist = trackWidth - window.innerWidth;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: pin,
+        pin: true,
+        scrub: 1.2,
+        start: 'top top',
+        end: () => '+=' + travelDist,
+        invalidateOnRefresh: true,
+        onUpdate: self => {
+          if (bar) bar.style.transform = `scaleX(${self.progress})`;
+          if (hint) hint.style.opacity = self.progress > 0.05 ? '0' : '1';
+        }
+      }
+    });
+
+    tl.to(track, {
+      x: () => -travelDist,
+      ease: 'none',
+    });
+
+    // Stagger step content on enter
+    steps.forEach((step, i) => {
+      const content = step.querySelector('.proc-step__content');
+      const img     = step.querySelector('.proc-step__img');
+      if (!content) return;
+      gsap.fromTo([img, content],
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1, y: 0, stagger: 0.1, duration: 0.8, ease: 'expo.out',
+          scrollTrigger: {
+            trigger: step,
+            containerAnimation: tl,
+            start: 'left 80%',
+            once: true,
+          }
+        }
+      );
+    });
+  }
+
+  initHScroll();
+  window.addEventListener('resize', () => {
+    ScrollTrigger.getAll().forEach(t => t.kill());
+    initHScroll();
+  });
+});
+</script>
+
+<style>
+/* ---- Horizontal scroll pin ---- */
+.proc-pin-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.proc-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Progress bar */
+.proc-progress {
+  position: fixed; top: var(--nav-h); left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  z-index: 8998;
+  transition: opacity .3s;
+}
+
+/* Scroll hint */
+.proc-hint {
+  position: absolute; bottom: 2.5rem; right: clamp(1.5rem,5vw,5rem);
+  display: flex; align-items: center; gap: .6rem;
+  transition: opacity .5s;
+}
+
+/* ---- Each Step ---- */
+.proc-step {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex; align-items: center;
+  flex-shrink: 0;
+  padding: calc(var(--nav-h) + 4rem) clamp(1.5rem,5vw,5rem) 4rem;
+  border-right: 1px solid var(--border);
+}
+.proc-step--last { border-right: none; }
+
+.proc-step__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: center;
+  width: 100%; max-width: 1200px; margin: 0 auto;
+}
+
+.proc-step__inner--flip {
+  direction: rtl;
+}
+.proc-step__inner--flip > * { direction: ltr; }
+
+.proc-step__img {
+  width: 100%; aspect-ratio: 4/5;
+  border-radius: 6px;
+}
+
+.proc-step__content {
+  display: flex; flex-direction: column; gap: 1rem;
+}
+
+.proc-step__num { display: block; margin-bottom: .25rem; }
+.proc-step__hl  { }
+.proc-step__body { max-width: 46ch; }
+
+.proc-step__tags {
+  display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem;
+}
+
+/* ---- Mobile process (hidden on desktop) ---- */
+.proc-mobile { display: none; }
+.proc-mobile__item { padding: clamp(2rem,4vw,3rem) 0; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .proc-pin-wrap { display: none; }
+  .proc-mobile   { display: block; }
+}
+</style>
+</body>
+</html>
